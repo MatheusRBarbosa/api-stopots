@@ -1,1 +1,1 @@
-web: cd build/ ; node main.js
+web: node dist/main.js
