@@ -2,7 +2,7 @@ import { createConnection } from 'typeorm';
 
 const db_type = 'mongodb';
 const db_host = process.env.HOST || 'ds145043.mlab.com';
-const db_port: number = parseInt( process.env.PORT ) || 45043;
+const db_port: number = 45043 //parseInt( process.env.PORT ) || 45043;
 const db_username = process.env.USER;
 const db_password = process.env.PASSWORD;
 const db_database = process.env.SCHEMA || 'stopots';
