@@ -1,4 +1,5 @@
 ![Sonar](https://sonarcloud.io/api/project_badges/measure?project=MatheusRBarbosa_stopots&metric=alert_status)
+![Travis](https://travis-ci.org/MatheusRBarbosa/stopots.svg?branch=master)
 
 ## Description
 
