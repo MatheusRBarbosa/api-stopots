@@ -9,7 +9,6 @@ addons:
 install:
 - npm install
 script:
-- npm test
 - sonar-scanner
 deploy:
   provider: heroku
