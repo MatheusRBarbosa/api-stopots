@@ -7,6 +7,9 @@ export class Answers {
     id: ObjectID;
 
     @Column()
+    letra: string;
+
+    @Column()
     nome: string[];
 
     @Column()

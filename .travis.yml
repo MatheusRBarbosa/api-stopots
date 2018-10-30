@@ -14,5 +14,10 @@ deploy:
   provider: heroku
   api_key:
     secure: "$HEROKU_API_KEY"
+  on:
+    repo: matheusrbarbosa/stopots
+    branches:    
+      only:      
+        - master
   app:
     develop: stopots
