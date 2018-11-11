@@ -18,6 +18,10 @@ __decorate([
 ], Answers.prototype, "id", void 0);
 __decorate([
     typeorm_1.Column(),
+    __metadata("design:type", String)
+], Answers.prototype, "letra", void 0);
+__decorate([
+    typeorm_1.Column(),
     __metadata("design:type", Array)
 ], Answers.prototype, "nome", void 0);
 __decorate([

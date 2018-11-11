@@ -32,6 +32,12 @@ let AnswersService = class AnswersService {
             return yield this.answersRepository.find();
         });
     }
+    findOne(letter) {
+        return __awaiter(this, void 0, void 0, function* () {
+            letter = letter.toUpperCase();
+            return yield this.answersRepository.findOne({ letra: letter });
+        });
+    }
 };
 AnswersService = __decorate([
     common_1.Injectable(),

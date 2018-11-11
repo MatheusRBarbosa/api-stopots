@@ -1,6 +1,7 @@
 import { ObjectID } from "typeorm";
 export declare class Answers {
     id: ObjectID;
+    letra: string;
     nome: string[];
     fruta: string[];
     animal: string[];
