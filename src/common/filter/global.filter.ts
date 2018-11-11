@@ -28,16 +28,6 @@ export class GlobalFilter implements ExceptionFilter {
                     message: 'Erro interno do servidor'
                 } );
         }
-        else if ( status == 600 ) {
-            response
-                .status( status )
-                .json( {
-                    statusCode: status,
-                    timestamp: new Date().toISOString(),
-                    path: request.url,
-                    message: 'blablablalbal'
-                } );
-        }
         else {
             response
                 .status( status )
