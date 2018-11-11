@@ -15,6 +15,6 @@ export class AnswersController{
 
     @Get('/:letra')
     public async findOne(@Param('letra') letra){
-        let response = this.service.findOne(letra);
+        return this.service.findOne(letra);
     }
 }
