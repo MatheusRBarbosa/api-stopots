@@ -23,4 +23,4 @@ deploy:
       only:      
         - master
   app:
-    develop: stopots
+    develop: api-stopots
