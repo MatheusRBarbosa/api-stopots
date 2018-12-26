@@ -357,9 +357,9 @@ export class AnswersService {
             ]
         }
         if (letter != "")
-            return [obj]
+            return obj
         else
-            return []
+            return ""
     }
 
 }

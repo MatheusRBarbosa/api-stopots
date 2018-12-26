@@ -2,6 +2,6 @@ import { AnswersService } from './answers.service';
 export declare class AnswersController {
     private readonly service;
     constructor(service: AnswersService);
-    findAll(): Promise<import("./answers.entity").Answers[]>;
-    findOne(letra: any): Promise<any>;
+    findAll(res: any): Promise<void>;
+    findOne(letter: any, res: any): Promise<void>;
 }

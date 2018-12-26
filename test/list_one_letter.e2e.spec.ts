@@ -4,6 +4,7 @@ import * as request from 'supertest';
 import { INestApplication } from "@nestjs/common";
 import { AppModule } from "../src/app.module";
 import { AnswersService } from "../src/answers/answers.service";
+import { Answers } from "../src/answers/answers.entity";
 
 const feature = loadFeature( './test/features/list_one_letter.feature' );
 
@@ -12,7 +13,7 @@ jest.mock( '../src/answers/answers.module' );
 jest.mock( '../src/app.module' );
 
 let res: any;
-let answer: any;
+let answer: Answers;
 let letter: any;
 
 defineFeature( feature, test => {
@@ -33,7 +34,7 @@ defineFeature( feature, test => {
       then
     } ) => {
       given( "Eu quero saber as respostas de uma determinada letra", async () => {
-        letter = 'c'
+        letter = 'A'.toUpperCase();
       } );
   
       when( "Eu pesquisar uma letra", async () => {
@@ -44,7 +45,7 @@ defineFeature( feature, test => {
   
       then( "Recebo um array com todas as respostas da letra que pesquisei", () => {
         answer = JSON.parse( JSON.stringify( res.body ) );
-        expect( answer.length ).toBeGreaterThan( 0 );
+        expect( answer.letra ).toEqual(letter);
       } );
     } );
   

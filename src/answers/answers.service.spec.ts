@@ -17,8 +17,8 @@ describe( 'AnswersService', () => {
   } );
 
   it( 'O retorno das respostas devem ser maiores do que 0 quando passado uma letra', async () => {
-    let res = await service.findOne('C'); //404 eh um id de um ponto real.
-    console.log(res.length)
-    expect (res.length).toBeGreaterThan(0);
+    let letter = 'a'.toUpperCase();
+    let res = await service.findOne(letter);
+    expect (res.letra).toEqual(letter)
   } );
 } );

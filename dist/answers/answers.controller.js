@@ -22,30 +22,58 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const answers_service_1 = require("./answers.service");
+const global_error_1 = require("../common/DTOs/error/global.error");
 let AnswersController = class AnswersController {
     constructor(service) {
         this.service = service;
     }
-    findAll() {
-        return this.service.findAll();
-    }
-    findOne(letra) {
+    findAll(res) {
         return __awaiter(this, void 0, void 0, function* () {
-            return this.service.findOne(letra);
+            try {
+                res
+                    .status(common_1.HttpStatus.OK)
+                    .send(yield this.service.findAll());
+            }
+            catch (err) {
+                let msg = err.message;
+                let status = common_1.HttpStatus.BAD_GATEWAY;
+                let result = new global_error_1.GlobalError(msg, status);
+                res
+                    .status(common_1.HttpStatus.BAD_GATEWAY)
+                    .send(result);
+            }
+        });
+    }
+    findOne(letter, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                res
+                    .status(common_1.HttpStatus.OK)
+                    .send(yield this.service.findOne(letter));
+            }
+            catch (err) {
+                let msg = err.message;
+                let status = common_1.HttpStatus.BAD_GATEWAY;
+                let result = new global_error_1.GlobalError(msg, status);
+                res
+                    .status(common_1.HttpStatus.BAD_GATEWAY)
+                    .send(result);
+            }
         });
     }
 };
 __decorate([
     common_1.Get(),
+    __param(0, common_1.Res()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
-    __metadata("design:returntype", void 0)
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
 ], AnswersController.prototype, "findAll", null);
 __decorate([
     common_1.Get('/:letra'),
-    __param(0, common_1.Param('letra')),
+    __param(0, common_1.Param('letra')), __param(1, common_1.Res()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
+    __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], AnswersController.prototype, "findOne", null);
 AnswersController = __decorate([
