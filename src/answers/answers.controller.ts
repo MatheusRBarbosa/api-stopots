@@ -31,7 +31,7 @@ export class AnswersController{
         try{
             res
             .status(HttpStatus.OK)
-            .send(this.service.findOne(letter))
+            .send(await this.service.findOne(letter))
         }
         catch (err){
             let msg = err.message;

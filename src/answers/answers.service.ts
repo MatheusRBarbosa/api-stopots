@@ -14,7 +14,7 @@ export class AnswersService {
     return await this.answersRepository.find();
   }
 
-  async findOne(letter: string): Promise<any> {
+  async findOne(letter: string): Promise<Answers> {
       letter = letter.toUpperCase();
       return await this.answersRepository.findOne({letra: letter});
     }

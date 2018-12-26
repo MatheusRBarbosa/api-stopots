@@ -48,8 +48,6 @@ defineFeature( feature, test => {
       } );
     } );
   
-  
-  
     test( "O caracter passado não é uma letra", ( {
       given,
       when,
