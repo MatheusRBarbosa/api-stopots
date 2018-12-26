@@ -17,6 +17,7 @@ deploy:
   api_key:
     secure: "$HEROKU_API_KEY"
   on:
+    tags: true
     repo: MatheusRBarbosa/stopots
     branches:    
       only:      
