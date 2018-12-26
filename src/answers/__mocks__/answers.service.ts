@@ -15,7 +15,6 @@ let obj1 = {
 @Injectable()
 export class AnswersService {
 
-
     public async findAll(){
         return [obj1]
     }
@@ -23,7 +22,7 @@ export class AnswersService {
     public async findOne(letter: string){
         if (letter != "")
             return obj1
-        else
+        else  
             return letter
     }
 

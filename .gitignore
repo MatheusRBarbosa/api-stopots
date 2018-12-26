@@ -2,4 +2,5 @@ node_modules/
 .vscode/
 .scannerwork/
 package-lock.json
-dist
+dist/
+coverage/
