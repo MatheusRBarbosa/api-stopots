@@ -1,6 +1,6 @@
-![Sonar](https://sonarcloud.io/api/project_badges/measure?project=MatheusRBarbosa_stopots&metric=alert_status)
-![Travis](https://travis-ci.org/MatheusRBarbosa/stopots.svg?branch=master)
-![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=MatheusRBarbosa_stopots&metric=alert_status)](https://sonarcloud.io/dashboard?id=MatheusRBarbosa_stopots)
+[![Build Status](https://travis-ci.org/MatheusRBarbosa/api-stopots.svg?branch=master)](https://travis-ci.org/MatheusRBarbosa/api-stopots)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 ## Description
