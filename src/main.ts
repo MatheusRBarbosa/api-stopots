@@ -13,12 +13,12 @@ async function bootstrap() {
   .setTitle( pacote.name )
   .setDescription( pacote.description )
   .setVersion( pacote.version )
-  .addTag('Stopots')
   .setSchemes('http', 'https')
   .build();
 
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('/', app, document);
+  
   app.use(cors());
   //app.useGlobalFilters(new GlobalFilter() )
   await app.listen(parseInt(process.env.PORT) || 3001);
